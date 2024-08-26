@@ -1,0 +1,4 @@
+access content:
+  title: 'access content'
+  description: 'Allow users to access the custom page.'
+  restrict access: TRUE

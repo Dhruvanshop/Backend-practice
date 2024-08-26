@@ -1,0 +1,9 @@
+services:
+  random_depen.example_service:
+    class: Drupal\random_depen\Service\ExampleService
+  
+  #  random_depen.altered_translation:
+  #   class: Drupal\random_depen\Service\AlteredTranslation
+  #   decorates: string_translation
+  #   arguments: 
+  #     - '@random_depen.altered_translation.inner'

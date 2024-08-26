@@ -1,0 +1,8 @@
+uuid: b09291de-e6e7-475c-bbc6-8ffa3025e30f
+langcode: en
+status: true
+dependencies: {  }
+id: random-categories
+label: 'Random categories'
+description: ''
+locked: false

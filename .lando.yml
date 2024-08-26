@@ -1,0 +1,4 @@
+name: mod3restest
+recipe: drupal10
+config:
+  webroot: web

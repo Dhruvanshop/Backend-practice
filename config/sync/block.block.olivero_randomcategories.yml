@@ -1,0 +1,25 @@
+uuid: edc539fe-2f31-4205-9301-8e3c2c5b987d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.random-categories
+  module:
+    - system
+  theme:
+    - olivero
+id: olivero_randomcategories
+theme: olivero
+region: primary_menu
+weight: 0
+provider: null
+plugin: 'system_menu_block:random-categories'
+settings:
+  id: 'system_menu_block:random-categories'
+  label: 'Random categories'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: false
+visibility: {  }
