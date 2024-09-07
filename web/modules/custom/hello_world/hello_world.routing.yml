@@ -1,0 +1,39 @@
+hello_world.content:
+  path: '/custom/page'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\myController::content'
+    _title: 'Basic Page'
+  requirements:
+    _permission: 'access content'
+
+hello_world.settings:
+  path: '/admin/config/system/hello_world'
+  defaults:
+    _form: '\Drupal\hello_world\Form\HelloFormSetting'
+    _title: 'Hello World Settings'
+  requirements:
+    _permission: 'administer site configuration'
+
+hello_world.example:
+  path: '/example-data'
+  defaults:
+    _title: 'Example details'
+    _form: 'Drupal\hello_world\Form\ExampleForm'
+  requirements:
+    _permission: 'access content'
+
+hello_world.ajax:
+  path: '/example-ajax-data'
+  defaults:
+    _title: 'Example ajax details'
+    _form: 'Drupal\hello_world\Form\ExampleAjaxForm'
+  requirements:
+    _permission: 'access content'
+
+hello_world.custom_page:
+  path: '/custom-page'
+  defaults:
+    _controller: '\Drupal\hello_world\Controller\CustomPageController::view'
+    _title: 'Custom Page'
+  requirements:
+    _custom_access: '\Drupal\hello_world\Access\CustomRouteAccessCheck::access'

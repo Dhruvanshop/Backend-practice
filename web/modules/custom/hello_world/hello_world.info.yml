@@ -1,0 +1,7 @@
+name: Hello World
+type: module
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - token
+configure: hello_world.settings

@@ -1,0 +1,29 @@
+uuid: d38ad006-d58a-42b4-9ab4-a55eed10ccca
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recent_sports
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: olivero_views_block__recent_sports_block_1
+theme: olivero
+region: breadcrumb
+weight: 0
+provider: null
+plugin: 'views_block:recent_sports-block_1'
+settings:
+  id: 'views_block:recent_sports-block_1'
+  label: ''
+  label_display: visible
+  provider: views
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/home\r\n/"

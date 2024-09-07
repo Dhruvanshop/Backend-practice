@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the custom_form_example module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function flagship_programmer_form_schema() {
+  $schema['dynamic_groups'] = [
+    'description' => 'Stores dynamic groups of fields from the custom form.',
+    'fields' => [
+      'id' => [
+        'description' => 'Primary key: Unique group ID.',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'group_name' => [
+        'description' => 'Name of the group.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'label_1' => [
+        'description' => 'Name of the first label.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+      ],
+      'value_1' => [
+        'description' => 'Value of the first label.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+      ],
+      'label_2' => [
+        'description' => 'Name of the second label.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+      ],
+      'value_2' => [
+        'description' => 'Value of the second label.',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => FALSE,
+      ],
+    ],
+    'primary key' => ['id'],
+  ];
+
+  return $schema;
+}

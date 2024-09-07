@@ -1,0 +1,15 @@
+dependency_example.form:
+  path: '/dependency-example-form'
+  defaults:
+    _form: '\Drupal\dependency_example\Form\ExampleForm'
+    _title: 'Example Form'
+  requirements:
+    _permission: 'access content'
+
+dependency_example.custom_service_form:
+  path: '/custom-service-form'
+  defaults:
+    _form: '\Drupal\dependency_example\Form\CustomServiceForm'
+    _title: 'Custom Service Form'
+  requirements:
+    _permission: 'access content'

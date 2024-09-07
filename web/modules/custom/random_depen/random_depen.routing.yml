@@ -1,0 +1,15 @@
+random_depen.custom_service_form:
+  path: '/custom-servi-form'
+  defaults:
+    _form: '\Drupal\random_depen\Form\RandomForm'
+    _title: 'Custom Service Form'
+  requirements:
+    _permission: 'access content'
+
+random_depen.content:
+  path: '/random-depen/content'
+  defaults:
+    _controller: '\Drupal\random_depen\Controller\RandomController::content'
+    _title: 'Random Content'
+  requirements:
+    _permission: 'access content'

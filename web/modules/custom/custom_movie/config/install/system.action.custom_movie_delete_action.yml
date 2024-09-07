@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_movie
+id: custom_movie_delete_action
+label: 'Delete custom movies'
+type: custom_movie
+plugin: entity:delete_action:custom_movie
+configuration: {  }

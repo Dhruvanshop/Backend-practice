@@ -1,0 +1,32 @@
+uuid: b381927f-48ee-4f3e-91ef-276be18bbd3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.news
+  module:
+    - comment
+    - contextual
+    - file
+    - node
+    - system
+    - toolbar
+_core:
+  default_config_hash: e_wG1u7SrGaJbY2-Szgbgl-c8T3kdirU3uTNq2c_QJQ
+id: content_editor
+label: 'Content editor'
+weight: 2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access contextual links'
+  - 'access toolbar'
+  - 'create news content'
+  - 'delete own files'
+  - 'delete own news content'
+  - 'edit own comments'
+  - 'edit own news content'
+  - 'view all revisions'
+  - 'view own unpublished content'
+  - 'view the administration theme'

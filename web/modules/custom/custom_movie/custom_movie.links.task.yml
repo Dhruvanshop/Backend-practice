@@ -1,0 +1,26 @@
+entity.custom_movie.view:
+  title: 'View'
+  route_name: entity.custom_movie.canonical
+  base_route: entity.custom_movie.canonical
+entity.custom_movie.edit_form:
+  title: 'Edit'
+  route_name: entity.custom_movie.edit_form
+  base_route: entity.custom_movie.canonical
+entity.custom_movie.delete_form:
+  title: 'Delete'
+  route_name: entity.custom_movie.delete_form
+  base_route: entity.custom_movie.canonical
+  weight: 10
+entity.custom_movie.collection:
+  title: 'Custom movies'
+  route_name: entity.custom_movie.collection
+  base_route: system.admin_content
+  weight: 10
+entity.custom_movie_type.edit_form:
+  title: 'Edit'
+  route_name: entity.custom_movie_type.edit_form
+  base_route: entity.custom_movie_type.edit_form
+entity.custom_movie_type.collection:
+  title: 'List'
+  route_name: entity.custom_movie_type.collection
+  base_route: entity.custom_movie_type.collection

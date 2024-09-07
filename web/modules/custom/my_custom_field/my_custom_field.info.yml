@@ -1,0 +1,7 @@
+name: 'My Custom Field'
+type: module
+description: 'Provides a custom field type.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:field

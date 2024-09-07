@@ -1,0 +1,4 @@
+access movie api:
+  title: 'Access Movie API'
+  description: 'Permission to access the movie API endpoint.'
+  restrict access: TRUE

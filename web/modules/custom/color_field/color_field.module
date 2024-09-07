@@ -1,0 +1,17 @@
+<?php
+use Drupal\Core\Access\AccessResult;
+
+/**
+ * Implements hook_entity_field_access().
+ */
+function color_field_field_access($operation, $field, $entity, $account) {
+  if ($field->field_name == 'field_color_field' && $operation == 'view') {
+    // Check if the user has the 'admin' role.
+    if (!in_array('admin', array_values($account->getRoles()))) {
+      // If not, deny access.
+      return AccessResult::forbidden();
+    }
+  }
+  // Otherwise, allow access.
+  return AccessResult::allowed();
+}

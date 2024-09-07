@@ -1,0 +1,16 @@
+services:
+  routechecker.route_subscriber:
+    class: Drupal\routechecker\EventSubscriber\RouteAccessSubscriber
+    arguments:
+      - '@current_user'
+    tags:
+      - { name: 'event_subscriber' }
+
+
+# services:
+#   routechecker.route_subscriber:
+#     class: Drupal\routechecker\EventSubscriber\RouteAccessSubscriber
+#     arguments: ['@current_user']
+#     tags:
+#       - { name: event_subscriber }
+

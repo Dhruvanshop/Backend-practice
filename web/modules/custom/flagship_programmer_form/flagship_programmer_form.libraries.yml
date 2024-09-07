@@ -1,0 +1,4 @@
+flagship_programmes:
+  css:
+    theme:
+      css/flagship-programmes.css: {}

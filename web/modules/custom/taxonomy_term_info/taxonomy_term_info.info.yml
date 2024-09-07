@@ -1,0 +1,8 @@
+name: 'Taxonomy Term Info'
+type: module
+description: 'Displays information about a taxonomy term and nodes associated with it.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - taxonomy
+  - node

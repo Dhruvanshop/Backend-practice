@@ -1,0 +1,14 @@
+<?php
+
+function taxonomy_term_info_page_attachments(array &$attachments) {
+  // Attach the global JS library sitewide.
+  $attachments['#attached']['library'][] = 'taxonomy_term_info/global_js';
+}
+
+function taxonomy_term_info_entity_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  // Check if the entity is a node and if its content type is 'article'.
+  if ($entity->getEntityTypeId() === 'node' && $entity->bundle() === 'movie') {
+    // Attach the custom library for the 'article' content type.
+    $build['#attached']['library'][] = 'taxonomy_term_info/custom_bundle_js';
+  }
+}  

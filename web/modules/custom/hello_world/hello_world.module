@@ -1,0 +1,39 @@
+<?php 
+
+use Drupal\node\NodeInterface;
+
+/**
+ * @file
+ * This file demonstrate how to use hooks functions.
+ */
+
+/**
+ * Implements hook_cron().
+ */
+function hello_world_cron() {
+  \Drupal::messenger()->addMessage(t("Helllo world i have cleared the cache"));
+}
+
+function hello_world_node_view(array &$build, \Drupal\Core\Entity\EntityInterface $entity, \Drupal\Core\Entity\Display\EntityViewDisplayInterface $display, $view_mode) {
+  $current_user = \Drupal::currentUser();
+    if (($entity instanceof NodeInterface ) && $current_user->isAuthenticated()) {
+      $nid = $entity->id();
+      $session = \Drupal::request()->getSession();
+      $view_count = $session->get('hello_world_' . $nid, 0);
+      $view_count++;
+      $session->set('hello_world_' . $nid, $view_count);
+      $build['hello_world'] = [
+        '#cache' => [
+          'contexts' => ['session'],
+          'max-age' => 0,
+        ],
+      ];
+      \Drupal::messenger()->addStatus(t('This node has been viewed @count times in this session.', ['@count' => $view_count]));
+    }
+  }
+
+function hello_world_route_alter(array &$routes) {
+    if (isset($routes['hello_world.custom_page'])) {
+      $routes['hello_world.custom_page']->setRequirement('_role', 'administrator');
+    }
+  }
