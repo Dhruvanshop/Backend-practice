@@ -1,0 +1,24 @@
+routechecker.example:
+  path: '/routechecker/example'
+  defaults:
+    _title: 'Example'
+    _controller: '\Drupal\routechecker\Controller\RoutecheckerController'
+  requirements:
+    _permission: 'access content'
+
+routechecker.custom_page:
+  path: '/custom-pag'
+  defaults:
+    _controller: '\Drupal\routechecker\Controller\CustomPagController::customPage'
+    _title: 'Custom Page'
+  requirements:
+    _custom_access: '\Drupal\routechecker\Access\CustomRouteAccessCheck::access'
+
+routechecker.campaign_value:
+  path: '/campaign/value/{number}'
+  defaults:
+    _controller: '\Drupal\routechecker\Controller\CampaignController::value'
+    _title: 'Campaign Value'
+  requirements:
+    _permission: 'access content'
+    number: '\d+'

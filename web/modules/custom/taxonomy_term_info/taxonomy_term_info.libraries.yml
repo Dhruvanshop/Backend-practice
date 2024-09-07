@@ -1,0 +1,14 @@
+global_js:
+  version: 1.x
+  js:
+    js/global.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+custom_bundle_js:
+  version: 1.x
+  js:
+    js/custom_bundle.js: {}
+  dependencies:
+    - core/drupal

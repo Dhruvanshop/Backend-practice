@@ -1,0 +1,12 @@
+custom_movie.custom_movie_type.*:
+  type: config_entity
+  label: 'Custom movie type config'
+  mapping:
+    id:
+      type: string
+      label: 'ID'
+    label:
+      type: label
+      label: 'Label'
+    uuid:
+      type: string

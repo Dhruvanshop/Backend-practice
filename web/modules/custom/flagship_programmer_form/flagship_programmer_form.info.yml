@@ -1,0 +1,7 @@
+name: 'Flagship Programmer Form'
+type: module
+description: 'Provides a custom form with add and remove functionality.'
+core_version_requirement: ^8 || ^9 || ^10
+package: Custom
+dependencies:
+  - drupal:block

@@ -1,0 +1,15 @@
+_core:
+  default_config_hash: ijfbzDTN4CbE7Sr-6ubWzy_t1vH4OtU1doNCLssVz-4
+langcode: en
+uuid: a9672d40-7c2f-4b7b-bdcf-115165cd4431
+name: 'Local Employee management portal'
+mail: dhruv210803@gmail.com
+slogan: ''
+page:
+  403: /node/3
+  404: /node/2
+  front: /node/1
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: en
+mail_notification: null

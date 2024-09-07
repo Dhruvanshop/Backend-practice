@@ -1,0 +1,9 @@
+# services:
+#   dependency_example.form:
+#     class: Drupal\dependency_example\Form\ExampleForm
+#     arguments: ['@logger.factory']
+#     tags:
+#       - { name: form_builder, form_id: example_form }
+services:
+  dependency_example.example_service:
+    class: Drupal\dependency_example\Service\ExampleService

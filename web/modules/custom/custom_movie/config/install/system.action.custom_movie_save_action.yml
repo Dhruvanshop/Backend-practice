@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - custom_movie
+id: custom_movie_save_action
+label: 'Save custom movies'
+type: custom_movie
+plugin: entity:save_action:custom_movie
+configuration: {  }

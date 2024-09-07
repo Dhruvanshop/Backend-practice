@@ -1,0 +1,52 @@
+.flagship-programmes {
+  text-align: center;
+  background-image: url('../image/temp1.jpg'); /* Add your background image */
+  background-size: cover;
+  padding: 50px;
+  color: white;
+}
+.flagship-programmes h2{
+  color: aliceblue;
+}
+
+.programmes {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.programme {
+  width: 18%;
+  margin: 10px;
+}
+
+.programme h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: azure;
+}
+
+.programme-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5em;
+  
+}
+
+.programme-item {
+  text-align: center;
+  padding: 20px;
+}
+
+.label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.value {
+  color: #ff7f00; /* Adjust this color to match your design */
+  font-size: 2em;
+}

@@ -1,0 +1,5 @@
+name: 'award movie'
+type: module
+description: 'Provides a award winning movie'
+core_version_requirement: ^10 || ^9
+package: Custom

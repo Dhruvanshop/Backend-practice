@@ -1,0 +1,11 @@
+entity.custom_movie_type.collection:
+  title: 'Custom movie types'
+  description: 'Manage and CRUD actions on Custom movie type.'
+  parent: system.admin_structure
+  route_name: entity.custom_movie_type.collection
+
+entity.custom_movie.collection:
+  title: 'Custom movies'
+  description: 'List of custom movies.'
+  route_name: entity.custom_movie.collection
+  parent: system.admin_content

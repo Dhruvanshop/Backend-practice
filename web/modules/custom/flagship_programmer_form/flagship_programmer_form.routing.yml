@@ -1,0 +1,7 @@
+flagship_programmer_form.dynamic_form:
+  path: '/dynamic-group-form'
+  defaults:
+    _form: '\Drupal\flagship_programmer_form\Form\DynamicGroupForm'
+    _title: 'Dynamic Group Form'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,7 @@
+name: 'Custom Email'
+type: module
+description: 'Sends emails to users every two hours.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:user

@@ -1,0 +1,7 @@
+adding:
+  dependencies:
+    config:
+      - filter.format.webform_default
+  permissions:
+    - 'use text format webform_default'
+removing: {  }

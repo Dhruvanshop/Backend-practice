@@ -1,0 +1,6 @@
+name: 'Dependency Example'
+type: module
+description: 'A custom module to demonstrate Dependency Injection in a form.'
+core_version_requirement: ^10 || ^9
+package: Custom
+

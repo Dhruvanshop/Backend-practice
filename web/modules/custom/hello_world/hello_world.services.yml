@@ -1,0 +1,5 @@
+services:
+  hello_world.custom_access_check:
+    class: Drupal\hello_world\Access\CustomRouteAccessCheck
+    tags:
+      - { name: access_check }

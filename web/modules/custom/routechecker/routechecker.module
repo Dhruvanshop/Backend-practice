@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Contains routechecker.module.
+ */
+
+/**
+ * Implements hook_permission().
+ */
+function routechecker_permission() {
+  return [
+    'access custom page' => [
+      'title' => t('Access custom page'),
+      'description' => t('Allow users to access the custom page.'),
+    ],
+  ];
+}

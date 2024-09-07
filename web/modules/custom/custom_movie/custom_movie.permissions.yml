@@ -1,0 +1,4 @@
+administer custom_movie types:
+  title: 'Administer custom movie types'
+  description: 'Maintain the types of custom movie entity.'
+  restrict access: true
