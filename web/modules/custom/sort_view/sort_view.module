@@ -1,0 +1,37 @@
+<?php
+
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+/**
+ * Implements hook_views_query_alter().
+ *
+ * Alter the sorting of a specific view.
+ */
+
+/**
+ * Implements hook_views_query_alter().
+ */
+function sort_view_views_query_alter(ViewExecutable $view, QueryPluginBase $query) {
+  if ($view->id() === 'events') {
+    /** @var \Drupal\views\Plugin\views\query\Sql $query */
+    $query->addOrderBy('node__field_event_date', 'field_event_date_value', 'DESC');
+
+  }
+}
+
+/**
+ * Implements hook_views_data_alter().
+ */
+function sort_view_views_data_alter(array &$data) {
+  // Define the relationship to taxonomy terms.
+  $data['node__field_event_type']['relationship_to_event_type'] = [
+    'title' => t('Event Type Relationship'),
+    'help' => t('Relate content to event type.'),
+    'relationship' => [
+      'base' => 'node_field_data', // The related table.
+      'base field' => 'nid', // The field on the related table.
+      'relationship field' => 'entity_id', // Replace with actual field machine name.
+      'id' => 'standard',
+    ],
+  ];
+}

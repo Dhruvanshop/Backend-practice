@@ -1,0 +1,18 @@
+taxonomy_term_info.form:
+  path: '/taxonomy-term-info'
+  defaults:
+    _form: '\Drupal\taxonomy_term_info\Form\TermInfoForm'
+    _title: 'Taxonomy Term Info'
+  requirements:
+    _permission: 'access content'
+
+
+term_info.page:
+  path: '/term-info'
+  defaults:
+    _controller: '\Drupal\taxonomy_term_info\Controller\TermInfoController::termInfoPage'
+    _title: 'Term Information'
+  requirements:
+    _permission: 'access content'
+
+

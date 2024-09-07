@@ -1,0 +1,6 @@
+name: 'Sort View '
+type: module
+description: 'Displays information sortefd.'
+core_version_requirement: ^10
+package: Custom
+

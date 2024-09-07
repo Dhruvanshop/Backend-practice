@@ -1,0 +1,38 @@
+{# templates/event-dashboard.html.twig #}
+
+<div class="event-dashboard">
+  <h2>Event Dashboard</h2>
+
+  <h3>Yearly Event Counts</h3>
+  {% if data.yearly_counts %}
+    <ul>
+      {% for year, count in data.yearly_counts %}
+        <li>{{ year }}: {{ count }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No data available for yearly event counts.</p>
+  {% endif %}
+
+  <h3>Quarterly Event Counts</h3>
+  {% if data.quarterly_counts %}
+    <ul>
+      {% for quarter, count in data.quarterly_counts %}
+        <li>{{ quarter }}: {{ count }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No data available for quarterly event counts.</p>
+  {% endif %}
+
+  <h3>Event Counts by Type</h3>
+  {% if data.type_counts %}
+    <ul>
+      {% for type, count in data.type_counts %}
+        <li>{{ type }}: {{ count }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No data available for event counts by type.</p>
+  {% endif %}
+</div>

@@ -1,0 +1,59 @@
+<?php
+
+// use Drupal\user\UserInterface;
+
+/**
+ * Implements hook_cron().
+ */
+// function custom_email_cron() {
+//   // Get the current time and the last time an email was sent.
+//   $last_sent = \Drupal::state()->get('custom_email.last_sent', 0);
+//   $current_time = \Drupal::time()->getCurrentTime();
+
+//   // Check if two hours have passed since the last email was sent.
+//   if ($current_time - $last_sent >= 7200) {
+//     // Load all users who should receive the email.
+//     $users = \Drupal::entityTypeManager()->getStorage('user')->loadMultiple();
+
+//     // Send email to each user.
+//     foreach ($users as $user) {
+//       // Ensure the loaded entity is a UserInterface object.
+//       if ($user instanceof UserInterface) {
+//         _custom_email_send($user);
+//       }
+//     }
+
+//     // Update the last sent time.
+//     \Drupal::state()->set('custom_email.last_sent', $current_time);
+//   }
+// }
+
+/**
+ * Helper function to send an email to a user.
+ *
+ * @param \Drupal\user\UserInterface $user
+ *   The user entity.
+ */
+// function _custom_email_send(UserInterface $user) {
+//   $mailManager = \Drupal::service('plugin.manager.mail');
+//   $module = 'custom_email';
+//   $key = 'notify_user';
+//   $to = $user->getEmail();
+//   $params['message'] = 'This is a scheduled email.';
+//   $language_code = $user->getPreferredLangcode();
+//   $send = TRUE;
+
+//   $mailManager->mail($module, $key, $to, $language_code, $params, NULL, $send);
+// }
+
+/**
+ * Implements hook_mail().
+ */
+// function custom_email_mail($key, &$message, $params) {
+//   switch ($key) {
+//     case 'notify_user':
+//       $message['subject'] = t('Scheduled Notification');
+//       $message['body'][] = $params['message'];
+//       break;
+//   }
+// }

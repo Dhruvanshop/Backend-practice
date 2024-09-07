@@ -1,0 +1,8 @@
+movie_api.movie_list:
+  path: '/api/movies'
+  defaults:
+    _controller: '\Drupal\movie_api\Controller\MovieApiController::getMovies'
+    _title: 'Movie List'
+  requirements:
+    _permission: 'access content'
+  methods: ['GET']
